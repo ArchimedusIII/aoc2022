@@ -1,0 +1,1 @@
+awk -v RS= '{print > ("output-" NR ".txt")}' input && paste -sd+ output-*.txt | bc | sort -nr | head -3 | paste -sd+ | bc
